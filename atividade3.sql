@@ -3,23 +3,22 @@ CREATE DATABASE School;
 USE School;
 
 CREATE TABLE estudantes (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    idade INT NOT NULL,
-    turma VARCHAR(50),
-    nota_final DECIMAL(4,2) NOT NULL,
-    matricula DATE NOT NULL
+    idade INT,
+    turma VARCHAR(50) NOT NULL,
+    nota_final DECIMAL(4,2) NOT NULL
 );
 
-INSERT INTO estudantes (nome, idade, turma, nota_final, matricula) VALUES
-('Lucas Andrade', 16, '1A', 8.5, '2022-01-10'),
-('Beatriz Santos', 15, '1A', 6.8, '2022-01-10'),
-('Pedro Almeida', 17, '2B', 9.0, '2021-01-15'),
-('Juliana Costa', 16, '2B', 7.5, '2021-01-15'),
-('Marcos Lima', 15, '1B', 5.0, '2022-01-10'),
-('Aline Rocha', 16, '3C', 8.0, '2020-01-12'),
-('Renato Silva', 17, '3C', 4.9, '2020-01-12'),
-('Carla Souza', 16, '2A', 7.9, '2021-01-15');
+INSERT INTO estudantes (nome, idade, turma, nota_final) VALUES
+('Lucas Andrade', 16, '72', 8.5),
+('Beatriz Santos', 15, '72', 6.8),
+('Pedro Almeida', 17, '09', 9.0),
+('Juliana Costa', 16, '09', 7.5),
+('Marcos Lima', 15, '65', 5.0),
+('Aline Rocha', 16, '89', 8.0),
+('Renato Silva', 17, '89', 4.9),
+('Carla Souza', 16, '09', 7.9);
 
 SELECT * FROM estudantes WHERE nota_final > 7;
 

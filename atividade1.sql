@@ -2,12 +2,12 @@ CREATE DATABASE RH_Tech;
 USE RH_Tech;
 
 CREATE TABLE colaboradores (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     cargo VARCHAR(50) NOT NULL,
     departamento VARCHAR(50),
     salario DECIMAL(10,2) NOT NULL,
-    data_admissao DATE NOT NULL
+    data_admissao DATE
 );
 
 INSERT INTO colaboradores (nome, cargo, departamento, salario, data_admissao) VALUES

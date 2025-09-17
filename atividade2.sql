@@ -2,7 +2,7 @@ CREATE DATABASE E_commerce;
 USE E_commerce;
 
 CREATE TABLE produtos (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(500) NOT NULL,
     categoria VARCHAR(100),
     preco DECIMAL(10,2) NOT NULL,
